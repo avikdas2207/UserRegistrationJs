@@ -54,7 +54,7 @@ class UserRegistration{
 
         UserPswd = () => {
 
-            let regex = /[A-Za-z0-9]{8}/;
+            let regex = /(?=.*[A-Z])[A-Za-z0-9]{8,15}$/;
             var Pswd = readlineSync.question("Enter Your Password ", {hideEchoBack: true} );
     
             if(regex.test(Pswd)){
