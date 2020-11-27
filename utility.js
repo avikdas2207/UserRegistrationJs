@@ -40,8 +40,22 @@ class UserRegistration{
         return(false)
     }
 
+    UserPhone = () => {
+
+        let regex = /(^[0-9]{2}[ ]+)?[0-9]{10}$/;
+        var PhoneNo = readlineSync.question("Enter Your Phone Number ");
+
+        if(regex.test(PhoneNo)){
+            console.log("Phone Number is Valid");
+        }else{
+            console.log("Phone Number is not Valid")
+        }
+        }
+
     
 
-}
+
+
+    } 
 
 module.exports = new UserRegistration();

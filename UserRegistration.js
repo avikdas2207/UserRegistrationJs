@@ -4,3 +4,4 @@ const Utility = require("./utility");
 Utility.UserFname();
 Utility.UserLname();
 Utility.UserEmail();
+Utility.UserPhone();
