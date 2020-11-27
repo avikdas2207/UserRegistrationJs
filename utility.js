@@ -42,7 +42,7 @@ class UserRegistration{
 
     UserPhone = () => {
 
-        let regex = /(^[0-9]{2}[ ]+)?[0-9]{10}$/;
+        let regex = /^\(?([0-9]{2})\)?[ ]?([0-9]{10})/;
         var PhoneNo = readlineSync.question("Enter Your Phone Number ");
 
         if(regex.test(PhoneNo)){
@@ -52,7 +52,17 @@ class UserRegistration{
         }
         }
 
+        UserPswd = () => {
+
+            let regex = /[A-Za-z0-9]{8}/;
+            var Pswd = readlineSync.question("Enter Your Password ", {hideEchoBack: true} );
     
+            if(regex.test(Pswd)){
+                console.log("Password is Valid");
+            }else{
+                console.log("Password is not Valid")
+            }
+            }
 
 
 
