@@ -1,2 +1,1 @@
-const Utility = require("./utility");
-Utility.UserInput();
+console.log("Welcome to User Registration Problem");
