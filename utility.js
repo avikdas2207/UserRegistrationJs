@@ -29,6 +29,17 @@ class UserRegistration{
         }
     }
 
+    UserEmail = () => {
+
+        let regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        var Email = readlineSync.questionEMail("Enter your E-mail");
+
+        if(regex.test(Email)){
+            return(true)
+        }
+        return(false)
+    }
+
     
 
 }
