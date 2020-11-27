@@ -2,19 +2,24 @@ var readlineSync = require('readline-sync');
 
 class UserRegistration{
    
-    UserInput = () => {
+    UserFname = () => {
 
         let regex = /^[A-Z]{1}[a-z]{2,}/;
-        var User = readlineSync.question("Enter Your Name");
+        var Fname = readlineSync.question("Enter Your First Name");
 
-        if(regex.test(User)){
+        if(regex.test(Fname)){
 
-            console.log("Valid")
+            console.log("First Name Valid")
         }else{
-            console.log("not valid")
+            console.log("First name not valid")
         }
     }
+
+    
 
 }
 
 module.exports = new UserRegistration();
+
+
+
