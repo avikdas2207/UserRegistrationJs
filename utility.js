@@ -15,11 +15,22 @@ class UserRegistration{
         }
     }
 
+
+    UserLname = () => {
+
+        let regex = /^[A-Z]{1}[a-z]{2,}/;
+        var Lname = readlineSync.question("Enter Your Last Name");
+
+        if(regex.test(Lname)){
+
+            console.log("Last Name Valid")
+        }else{
+            console.log("Last name not valid")
+        }
+    }
+
     
 
 }
 
 module.exports = new UserRegistration();
-
-
-
